@@ -19,3 +19,4 @@ tv-app/captures/
 .DS_Store
 *.log
 .env
+*.tsbuildinfo
