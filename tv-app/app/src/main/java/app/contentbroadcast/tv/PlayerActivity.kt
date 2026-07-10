@@ -97,7 +97,7 @@ class PlayerActivity : AppCompatActivity(), ControlClient.Listener {
         startPlayback(absolute, title)
     }
 
-    override fun onStop() {
+    override fun onStopCommand() {
         currentUrl = null
         main.removeCallbacks(retryPlayback)
         player?.stop()
