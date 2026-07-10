@@ -1,7 +1,7 @@
 # Content Broadcast
 
-Digital signage for a workspace or coffee shop: show YouTube live, ABEMA news, or any
-video stream on the Xiaomi TVs around the venue, all controlled from one admin page.
+Digital signage for venue: show YouTube live, ABEMA news, or any
+video stream on the Android TVs around the venue, all controlled from one admin page.
 
 ```
 ┌─ Admin browser ──► Admin UI (React, served by the server)
@@ -17,11 +17,6 @@ video stream on the Xiaomi TVs around the venue, all controlled from one admin p
    │  TV app │      ... per TV ...     │  TV app │   Android TV, Kotlin + ExoPlayer
    └─────────┘                         └─────────┘
 ```
-
-**Why this shape?** The venue network cannot reach YouTube/ABEMA directly. Only the
-server needs outside access (through a VPN or proxy): it pulls each source **once**
-and re-serves it as plain HLS on the LAN. The TVs never need a VPN, and ten displays
-showing the same live stream cost one upstream pull.
 
 ## Features
 
