@@ -1,0 +1,17 @@
+services:
+  broadcast:
+    build: .
+    container_name: content-broadcast
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./data:/data
+    environment:
+      # HTTP/SOCKS proxy used to PULL upstream sources (your VPN egress),
+      # e.g. http://192.168.1.1:7890 for a Clash box on the LAN.
+      # Leave empty if the host routes blocked traffic through a VPN already.
+      - RESTREAM_PROXY=${RESTREAM_PROXY:-}
+      # Set to 1 to transcode to H.264/AAC when a source's codecs won't
+      # stream-copy into HLS cleanly (costs CPU).
+      - RESTREAM_TRANSCODE=${RESTREAM_TRANSCODE:-0}
