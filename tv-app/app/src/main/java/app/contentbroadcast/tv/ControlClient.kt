@@ -23,7 +23,7 @@ class ControlClient(
 ) {
     interface Listener {
         fun onPlay(url: String, title: String)
-        fun onStop()
+        fun onStopCommand()
         fun onConnectionChanged(connected: Boolean)
     }
 
@@ -85,7 +85,7 @@ class ControlClient(
                         val title = msg.optString("title", url)
                         if (url.isNotEmpty()) main.post { listener.onPlay(url, title) }
                     }
-                    "stop" -> main.post { listener.onStop() }
+                    "stop" -> main.post { listener.onStopCommand() }
                     "ping" -> webSocket.send(JSONObject().put("type", "pong").toString())
                 }
             }
