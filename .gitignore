@@ -1,0 +1,21 @@
+# Node
+node_modules/
+dist/
+server/public/
+
+# Runtime data (SQLite DB + HLS segments)
+data/
+
+# Android
+tv-app/.gradle/
+tv-app/build/
+tv-app/app/build/
+tv-app/local.properties
+tv-app/.idea/
+*.iml
+tv-app/captures/
+
+# Misc
+.DS_Store
+*.log
+.env

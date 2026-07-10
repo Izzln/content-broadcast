@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Content Broadcast</string>
+    <string name="setup_hint">Enter the broadcast server address on your network</string>
+    <string name="server_address_hint">192.168.1.10:8080</string>
+    <string name="connect">Connect</string>
+    <string name="invalid_address">Enter a valid host or host:port</string>
+    <string name="device_id_label">Device ID: %1$s</string>
+    <string name="connecting">Connecting to %1$s…</string>
+    <string name="reconnecting">Reconnecting to %1$s…</string>
+    <string name="waiting_for_content">Waiting for content — %1$s</string>
+    <string name="loading">Loading %1$s…</string>
+    <string name="playback_error">Playback problem with %1$s, retrying…</string>
+</resources>
