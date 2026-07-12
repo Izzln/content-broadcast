@@ -36,7 +36,8 @@ video stream on the Android TVs around the venue, all controlled from one admin 
 Needs Docker on a mini-PC/NAS on the venue LAN.
 
 ```bash
-git clone <this repo> && cd content-broadcast
+git clone -b claude/workspace-video-display-uo11fx https://github.com/izzln/content-broadcast.git
+cd content-broadcast
 # optional: egress proxy for pulling blocked sources (see next section)
 echo "RESTREAM_PROXY=http://<proxy-host>:<port>" > .env
 docker compose up -d --build
